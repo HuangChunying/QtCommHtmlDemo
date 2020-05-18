@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>交互comm</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="qwebchannel.js"></script>
+  <!--引入qwebchannel.js-->
+
+  <script type="text/javascript">
+     var bridge;
+     function init()
+     {
+               new QWebChannel(qt.webChannelTransport,function (channel) {
+               bridge = channel.objects.channelObject;
+               bridge.fromLocalToWebPage.connect(function (response) {
+                   alert("received message from local:"+response);
+                 });
+               });
+     }
+    function fromWebToCpp()
+    {
+           var textcon = $("#name").val();
+           bridge.fromWebPageToLocal(textcon);
+    }
+
+    init();
+</script>
+</head>
+
+<body >
+  <input  type="text" id= "name" name="textcontent" value="请输入…"/>
+  <input  type="button"    onclick="fromWebToCpp()" value="msFromWebToCpp" />
+ </body>
+</body>
+</html>
