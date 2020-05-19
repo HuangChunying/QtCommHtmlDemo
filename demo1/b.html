@@ -9,29 +9,28 @@
   <!--引入qwebchannel.js-->
 
   <script type="text/javascript">
-     var bridge;
-     function init()
-     {
-               new QWebChannel(qt.webChannelTransport,function (channel) {
-               bridge = channel.objects.channelObject;
-               bridge.fromLocalToWebPage.connect(function (response) {
-                   alert("received message from local:"+response);
-                 });
-               });
-     }
-    function fromWebToCpp()
-    {
-           var textcon = $("#name").val();
-           bridge.fromWebPageToLocal(textcon);
+    var bridge;
+    function init() {
+      new QWebChannel(qt.webChannelTransport, function (channel) {
+        bridge = channel.objects.channelObject;
+        bridge.fromLocalToWebPage.connect(function (response) {
+          alert("received message from local:" + response);
+        });
+      });
+    }
+    function fromWebToCpp() {
+      var textcon = $("#name").val();
+      bridge.fromWebPageToLocal(textcon);
     }
 
     init();
-</script>
+  </script>
 </head>
 
-<body >
-  <input  type="text" id= "name" name="textcontent" value="请输入…"/>
-  <input  type="button"    onclick="fromWebToCpp()" value="msFromWebToCpp" />
- </body>
+<body>
+  <input type="text" id="name" name="textcontent" value="请输入…" />
+  <input type="button" onclick="fromWebToCpp()" value="msFromWebToCpp" />
 </body>
+</body>
+
 </html>

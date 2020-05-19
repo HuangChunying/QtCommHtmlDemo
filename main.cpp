@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Dialog w;
 
-    QString htmlpath ="D:/Qt_project/QtCommHtmlDemo/demo1/b.html";
+    QString htmlpath ="D:/Qt_project/QtCommHtmlDemo/demo1/a.html";
     w.setHtmlPath(htmlpath);
     w.show();
     return a.exec();
