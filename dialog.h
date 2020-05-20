@@ -2,6 +2,7 @@
 #define DIALOG_H
 
 #include <QDialog>
+#include <filedialog.h>
 #include "qwebchannelclass.h"
 namespace Ui {
 class Dialog;
@@ -14,10 +15,14 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = 0);
     void setHtmlPath(QString htmlPath);
+
     ~Dialog();
     void initWebChannel();
+
+
 private:
     Ui::Dialog *ui;
+    FileDialog *fileDialog;
     QWebChannelClass *m_pWebChannelClass;
 };
 

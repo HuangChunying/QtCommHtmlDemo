@@ -7,9 +7,14 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    fileDialog = new FileDialog();
+    QObject::connect(ui->pushButton, SIGNAL(clicked()), fileDialog, SLOT(show()));
+    QObject::connect(ui->pushButton_2, SIGNAL(clicked()), fileDialog, SLOT(exec()));
     m_pWebChannelClass = new QWebChannelClass(this);
     initWebChannel();
 }
+
+
 void Dialog::setHtmlPath(QString htmlPath)
 {
     ui->widget->setContextMenuPolicy(Qt::NoContextMenu);

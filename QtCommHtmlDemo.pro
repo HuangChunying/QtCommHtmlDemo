@@ -29,15 +29,18 @@ SOURCES += \
         dialog.cpp \
     dialog.cpp \
     main.cpp \
-    qwebchannelclass.cpp
+    qwebchannelclass.cpp \
+    filedialog.cpp
 
 HEADERS += \
         dialog.h \
     dialog.h \
-    qwebchannelclass.h
+    qwebchannelclass.h \
+    filedialog.h
 
 FORMS += \
-        dialog.ui
+        dialog.ui \
+    filedialog.ui
 
 DISTFILES += \
     demo1/echarts.js \
