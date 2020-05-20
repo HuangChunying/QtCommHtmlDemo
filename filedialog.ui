@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>751</width>
-    <height>363</height>
+    <height>388</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Dialogmodel</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/TaoLiu/Downloads/文档.png</normaloff>C:/Users/TaoLiu/Downloads/文档.png</iconset>
   </property>
   <widget class="QTreeView" name="treeView">
    <property name="geometry">

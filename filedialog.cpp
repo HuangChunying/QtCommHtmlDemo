@@ -16,8 +16,7 @@ FileDialog::FileDialog(QWidget *parent) :
             ui->listView,SLOT(setRootIndex(QModelIndex)));
     connect(ui->treeView,SIGNAL(clicked(QModelIndex)),
             ui->tableView,SLOT(setRootIndex(QModelIndex)));
-    connect(ui->treeView,SIGNAL(clicked(QModelIndex)),
-            this,SLOT(on_treeView_clicked(QModelIndex)));
+
 }
 
 FileDialog::~FileDialog()

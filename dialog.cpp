@@ -7,9 +7,13 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-    fileDialog = new FileDialog();
+    fileDialog = new FileDialog(this);
+    chartShow = new ChartShow();
+    chartWidget = new ChartWidget();
     QObject::connect(ui->pushButton, SIGNAL(clicked()), fileDialog, SLOT(show()));
     QObject::connect(ui->pushButton_2, SIGNAL(clicked()), fileDialog, SLOT(exec()));
+    QObject::connect(ui->pushButton_3, SIGNAL(clicked()), chartShow, SLOT(show()));
+    QObject::connect(ui->pushButton_4, SIGNAL(clicked()), chartWidget, SLOT(show()));
     m_pWebChannelClass = new QWebChannelClass(this);
     initWebChannel();
 }

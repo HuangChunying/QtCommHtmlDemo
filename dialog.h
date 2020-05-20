@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <filedialog.h>
+#include <chartshow.h>
+#include "chartwidget.h"
 #include "qwebchannelclass.h"
 namespace Ui {
 class Dialog;
@@ -23,6 +25,8 @@ public:
 private:
     Ui::Dialog *ui;
     FileDialog *fileDialog;
+    ChartShow *chartShow;
+    ChartWidget *chartWidget;
     QWebChannelClass *m_pWebChannelClass;
 };
 

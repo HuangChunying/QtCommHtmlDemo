@@ -30,17 +30,23 @@ SOURCES += \
     dialog.cpp \
     main.cpp \
     qwebchannelclass.cpp \
-    filedialog.cpp
+    filedialog.cpp \
+    chartshow.cpp \
+    chartwidget.cpp
 
 HEADERS += \
         dialog.h \
     dialog.h \
     qwebchannelclass.h \
-    filedialog.h
+    filedialog.h \
+    chartshow.h \
+    chartwidget.h
 
 FORMS += \
         dialog.ui \
-    filedialog.ui
+    filedialog.ui \
+    chartshow.ui \
+    chartwidget.ui
 
 DISTFILES += \
     demo1/echarts.js \

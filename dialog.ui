@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Dialogdemo</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/TaoLiu/Downloads/通知.png</normaloff>C:/Users/TaoLiu/Downloads/通知.png</iconset>
   </property>
   <widget class="QWebEngineView" name="widget" native="true">
    <property name="geometry">
@@ -49,6 +53,32 @@
     <string>非模式</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>0</y>
+     <width>131</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>charthowWindos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>0</y>
+     <width>131</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>chartWidget</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -61,7 +91,4 @@
  </customwidgets>
  <resources/>
  <connections/>
- <slots>
-  <slot>on_treeView_clicked()</slot>
- </slots>
 </ui>
